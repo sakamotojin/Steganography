@@ -9,13 +9,28 @@ package steganopgraphy;
  *
  * @author Sakamoto Jin
  */
-public class Steganopgraphy {
 
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String[] args) {
-        // TODO code application logic here
+
+
+
+public class Steganopgraphy 
+{
+  public static void main(String[] args) 
+  {
+    try
+    {
+      //Embed emb = new Embed("c:\\java\\DB.zip", "c:\\java\\Koala.jpg");
+      Embed emb = new Embed("c:\\add.exe", "c:\\java\\template.png", "tiger");
+      emb.embedFileInImage("c:\\java\\template1.png");
+      
+      Extract extr = new Extract("c:\\java\\template1.png", "tiger");
+      String trgt = extr.getFileFromImage();
+      System.out.println("File extracted as : " + trgt);
     }
-    
+    catch(Exception ex)
+    {
+      System.out.println("Err: " +ex);
+      ex.printStackTrace();
+    }
+  }
 }
