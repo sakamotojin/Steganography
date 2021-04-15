@@ -21,7 +21,7 @@ public class Steganopgraphy
     {
       //Embed emb = new Embed("c:\\java\\DB.zip", "c:\\java\\Koala.jpg");
       Embed emb = new Embed("c:\\add.exe", "c:\\java\\template.png", "tiger");
-      emb.embedFileInImage("c:\\java\\template1.png");
+      emb.embedFileInImage("template1.png");
       
       Extract extr = new Extract("c:\\java\\template1.png", "tiger");
       String trgt = extr.getFileFromImage();
