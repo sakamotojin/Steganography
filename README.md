@@ -1,2 +1,2 @@
 # Steganography
-A Project Implementing Steganopgraphy 
+A Project Implementing Steganography 
