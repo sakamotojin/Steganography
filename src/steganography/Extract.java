@@ -1,4 +1,4 @@
-package steganopgraphy;
+package steganography;
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -21,11 +21,13 @@ class Extract
 {
   String vesselImage;
   String password;
+  String resultFileLoaction;
   
-  Extract(String vesselImage, String password) 
+  Extract(String vesselImage, String password , String resultFileLoaction) 
   {
     this.vesselImage = vesselImage;
     this.password = password;
+    this.resultFileLoaction = resultFileLoaction;
   }
   
   String getFileFromImage()throws Exception
@@ -90,7 +92,7 @@ class Extract
             try
             {
               size = hdr.getSize(arr);
-              trgt = "f:\\" + hdr.getName(arr);
+              trgt = resultFileLoaction + "\\" +  hdr.getName(arr);
               fout = new FileOutputStream(trgt);
               q++;//to avoid reexecution of this if
             }
