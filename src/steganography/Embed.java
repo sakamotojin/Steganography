@@ -1,4 +1,4 @@
-package steganopgraphy;
+package steganography;
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -51,7 +51,7 @@ class Embed
       throw new Exception("File size is greater than the embedding capacity of image");
 
     //get the source name 
-    String name = src.getName();//c:\\java\\DB.zip ---> DB.zip
+    String name = src.getName();
     
     //Form the header using the name and size of the source file
     Header hdr = new Header(name, need);
